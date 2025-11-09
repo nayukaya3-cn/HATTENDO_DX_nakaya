@@ -1,2 +1,2 @@
 # HATTENDO_DX_nakaya
-研究題目 「GIGO危機からの脱却：Data-HACCP的アプローチによるデータ品質管理の体系化と、セキュリティ介入がAI精度を向上させるメカニズムの実装知研究」
+追加質問：Google Formで作成　https://forms.gle/bQh4LAKU9Dkb6zri9
