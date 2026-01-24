@@ -20,13 +20,13 @@ from typing import Any, Dict, List, Optional, Tuple
 import pandas as pd
 import streamlit as st
 
-# ---- Streamlit互換: _divider() が無い古い版向け ----
+# ---- Streamlit互換: st.divider() が無い古い版向け（再帰バグ防止） ----
 def _divider() -> None:
-    if hasattr(st, "divider"):
-        _divider()
+    div = getattr(st, "divider", None)
+    if callable(div):
+        div()
     else:
         st.markdown('---')
-
 
 APP_DIR = Path(__file__).resolve().parent
 CONFIG_PATH = APP_DIR / "config.json"
